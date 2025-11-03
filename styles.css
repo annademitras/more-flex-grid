@@ -72,7 +72,9 @@ header{
     background-clip: border-box;
     background-position: right;
     background-size: contain;
-    /* Styles were added here to arrange the content, I used flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;/* Styles were added here to arrange the content, I used flexbox */
     /* TO DO */
 }
 
@@ -135,7 +137,10 @@ nav{
 nav ul{
     list-style-type: none;
     padding: 0;
-    /* Styles were added here to arrange the content, I used flexbox */
+    display: flex;
+    flex-direction: row;
+
+    justify-content: left;/* Styles were added here to arrange the content, I used flexbox */
     /* TO DO */
 }
 
@@ -163,7 +168,8 @@ nav a svg{
 nav a span{
     display: block;
     position: relative;
-    /* Styles were added here to arrange the content, I used top and z-index for this */
+    z-index: 1;
+    top: 1rem;/* Styles were added here to arrange the content, I used top and z-index for this */
     /* TO DO */
 }
 
@@ -222,18 +228,22 @@ p{
 #plants{
     background-color: var(--wht);
     padding: 96px 32px;
-    /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;/* Styles were added here to arrange the content, I used grid */
     /* TO DO */
 }
 
 #plants h3, #plants > p{
-    /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1/-1;/* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
 
 #plants section{
-    /* Styles were added here to arrange the content, I used flexbox */
-    /* TO DO */
+    display: flex;/* Styles were added here to arrange the content, I used flexbox */
+    flex-direction: column;/* TO DO */
     margin: 32px auto 0;
 }
 
@@ -242,6 +252,7 @@ p{
 }
 
 #plants img{
+    order: -1;
     /* Styles were added here to arrange the content, I used a property for a flexbox child to change the order that the content appears on the page */
     /* TO DO */
     width: 100%;
@@ -263,13 +274,18 @@ p{
 #contact{
     color: var(--wht);
     padding: 64px 32px;
-    /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;/* Styles were added here to arrange the content, I used grid */
     /* TO DO */
 }
 
 /* Contact Heading and Paragraph */
 #contact h3, #contact > p{
-    /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1/-1;/* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
 
@@ -355,7 +371,10 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Social Media List */
 #social ul{
-    /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;/* Styles were added here to arrange the content, I used grid */
     /* TO DO */
     width: fit-content;
     margin: 16px auto;
@@ -365,7 +384,7 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Heading for Social Media Section */
 #social h4{
-    /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1/-1;/* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
 
